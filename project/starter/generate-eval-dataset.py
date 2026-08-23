@@ -39,6 +39,7 @@ def invoke_harness_once(
     gateway_arn: str,
     model_id: str,
     prompt: str,
+    actor_id: str, 
 ) -> Dict[str, Any]:
     """Invoke the harness with a single user message in a fresh session and
     return {"final_output_text": ...}.
@@ -61,6 +62,7 @@ def invoke_harness_once(
         # keeps every test independent.
         runtimeSessionId=f"{uuid.uuid4()}-evalcase",
         # Pin the model explicitly — never rely on the harness default.
+        actorId=actor_id,   
         model={"bedrockModelConfig": {"modelId": model_id}},
         tools=tools,
         messages=[{"role": "user", "content": [{"text": prompt}]}],
@@ -143,6 +145,7 @@ def main():
                     gateway_arn=gateway_arn,
                     model_id=args.model_id,
                     prompt=prompt,
+                    actor_id=f"eval-{test_id}-{uuid.uuid4()}",
                 )
                 response_text = result["final_output_text"]
                 n_ok += 1
