@@ -1,0 +1,67 @@
+{
+    "Items": [
+        {
+            "environment": {
+                "S": "Chrome 120, Windows 11"
+            },
+            "createdAt": {
+                "S": "2026-08-25T21:12:25.673504+00:00"
+            },
+            "description": {
+                "S": "order total shows the wrong currency after checkout"
+            },
+            "stepsToReproduce": {
+                "S": "add item, go to checkout, select USD, total shows EUR instead"
+            },
+            "ticketId": {
+                "S": "3a2da16e-1587-4549-ace0-ebf5aa0dc05b"
+            },
+            "status": {
+                "S": "OPEN"
+            }
+        },
+        {
+            "environment": {
+                "S": "Chrome 120 on macOS Sonoma"
+            },
+            "createdAt": {
+                "S": "2026-08-25T21:10:44.992317+00:00"
+            },
+            "stepsToReproduce": {
+                "S": "add an item to cart, go to checkout, then click Pay"
+            },
+            "description": {
+                "S": "The checkout page crashes every time I click Pay"
+            },
+            "ticketId": {
+                "S": "2db756d1-3729-44fc-a781-d105abd660d6"
+            },
+            "status": {
+                "S": "OPEN"
+            }
+        },
+        {
+            "environment": {
+                "S": "Chrome 120 on macOS Sonoma"
+            },
+            "createdAt": {
+                "S": "2026-08-25T20:58:58.927988+00:00"
+            },
+            "description": {
+                "S": "The checkout page crashes when I click the Pay button"
+            },
+            "stepsToReproduce": {
+                "S": "1. Add an item to the cart. 2. Go to checkout. 3. Click Pay."
+            },
+            "ticketId": {
+                "S": "0ace9107-9a41-4983-8666-b6eb6cab3869"
+            },
+            "status": {
+                "S": "OPEN"
+            }
+        }
+    ],
+    "Count": 3,
+    "ScannedCount": 3,
+    "ConsumedCapacity": null
+}
